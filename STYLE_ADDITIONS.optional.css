@@ -1,0 +1,64 @@
+/* ============================================================================
+   STYLE_ADDITIONS.optional.css   —   OPTIONAL APPENDIX, NOT REQUIRED
+   ----------------------------------------------------------------------------
+   Nothing in the site depends on this file. The Phase 6 Hero and Ecosystem
+   build and run with ZERO changes to globals.css.
+
+   This file exists only to reconcile the useful *new* color tokens from the
+   uploaded globals.css (which used HEX) into the repo's existing
+   space-separated RGB-CHANNEL format, so they compose with Tailwind opacity
+   utilities (e.g. bg-petrol-deep/40).
+
+   ⚠️  Do NOT replace globals.css with the uploaded hex file. That would break
+       every `bg-paper/50`-style alpha utility across the whole site, because
+       Tailwind here is configured against rgb-channel tokens, not hex.
+
+   HOW TO USE (only if you want these extra accents):
+   1. Paste the :root / .dark blocks below at the END of app/globals.css.
+   2. Add the matching color keys to tailwind.config.ts → theme.extend.colors,
+      following the existing pattern, e.g.:
+         'petrol-deep': 'rgb(var(--petrol-deep) / <alpha-value>)',
+         'petrol-mid':  'rgb(var(--petrol-mid)  / <alpha-value>)',
+         'sprout-light':'rgb(var(--sprout-light)/ <alpha-value>)',
+         'amber':       'rgb(var(--amber)       / <alpha-value>)',
+         'amber-warm':  'rgb(var(--amber-warm)  / <alpha-value>)',
+   3. Rebuild. Now you can use text-amber, bg-petrol-deep/30, etc.
+
+   If you don't need them, delete this file. It changes nothing.
+   ========================================================================== */
+
+:root {
+  /* Deeper / richer petrols — useful for gradient floors and dark stages */
+  --petrol-deep: 8 61 58;     /* was #083D3A */
+  --petrol-mid:  26 122 116;  /* was #1A7A74 */
+
+  /* Brighter sprout — good for hover/active accents on dark backgrounds */
+  --sprout-light: 77 196 154; /* was #4DC49A */
+
+  /* Warm amber pair — optional tertiary accent (use sparingly; off the core
+     petrol/sprout DNA, so reserve for highlights, never primary CTAs) */
+  --amber:      200 131 42;   /* was #C8832A */
+  --amber-warm: 224 155 68;   /* was #E09B44 */
+}
+
+.dark {
+  /* Tokens above are tuned to read on both themes; override here only if a
+     specific dark-mode adjustment is wanted. Left intentionally minimal. */
+  --petrol-deep: 8 61 58;
+  --petrol-mid:  26 122 116;
+  --sprout-light: 77 196 154;
+  --amber:      200 131 42;
+  --amber-warm: 224 155 68;
+}
+
+/* ----------------------------------------------------------------------------
+   NOTE on the uploaded file's component classes (.hero-video-wrapper,
+   .btn-primary, .timeline-*, .product-*, etc.):
+
+   These were NOT ported. The repo already implements those surfaces as React
+   components styled with Tailwind utilities + the existing token system. Pulling
+   in a parallel hand-authored class layer would create two competing styling
+   systems for the same elements. If you ever want a specific visual idea from
+   the uploaded sheet, lift that one rule into the relevant component instead of
+   adopting the whole layer.
+   -------------------------------------------------------------------------- */
