@@ -65,6 +65,31 @@ export const philosophy = {
   ],
 };
 
+/**
+ * EFFICACY — the founder "creed" beat (carried over from the source material's
+ * "Proving it on myself first" section). The self-observation idea already runs
+ * through `philosophy`, `journey` and `beyondBound`; this block exists to give it
+ * one memorable, human moment (the creed line + real footage). It does NOT repeat
+ * the glucose data — that is `CGMSection`'s job. Copy is the founder's own; no new
+ * factual claim is introduced here.
+ */
+export const efficacy = {
+  eyebrow: "First-hand efficacy",
+  title: "Proving it on myself first.",
+  creed: "What I won’t test on myself, I will never ask anyone else to trust.",
+  creedBy: "Priyanshu Chauhan — Founder & Director, Beyond Bound®",
+  body: [
+    "Before asking anyone to trust Beyond Bound, I wanted to understand the problem in my own body. For months I’ve worn a continuous glucose monitor, watching how ordinary decisions — food, sleep, movement, stress — move my own metabolism.",
+    "What began as curiosity became conviction. Health isn’t built through claims or advertising; it’s built through understanding, consistency, and change you can measure.",
+    "That habit still sets the standard for everything we build.",
+  ],
+  badge: "Founder self-observation",
+  caption:
+    "Founder self-observation footage. Same meals, same routine — the formulation is the only variable being evaluated. This is not a clinical claim.",
+  clips: ["/video/efficacy-1.mp4", "/video/efficacy-2.mp4", "/video/efficacy-3.mp4"],
+  poster: "/video/efficacy-poster.jpg",
+};
+
 export const journey: JourneyStage[] = [
   {
     index: "01",

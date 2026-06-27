@@ -61,7 +61,7 @@ export default function PhilosophyQuoteSection() {
                 transition={{
                   duration: 0.5,
                   delay: i * 0.055,
-                  ease: [0.22, 1, 0.36, 1],
+                  ease: [0.16, 1, 0.3, 1],
                 }}
                 aria-hidden="true"
               >
@@ -83,7 +83,7 @@ export default function PhilosophyQuoteSection() {
             animate={isQuoteInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: WORDS.length * 0.055 + 0.4 }}
           >
-            Priyanshu Chauhan — Founder &amp; CEO, Beyond Bound®
+            Priyanshu Chauhan — Founder &amp; Director, Beyond Bound®
           </motion.p>
         </div>
       </section>
@@ -104,7 +104,7 @@ export default function PhilosophyQuoteSection() {
                 className="lesson-card"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInsightInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.55, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.55, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
               >
                 <span className="lesson-num" aria-hidden="true">{item.num}</span>
                 <span className="lesson-label">{item.label}</span>

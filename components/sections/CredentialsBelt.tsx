@@ -62,7 +62,7 @@ function StatCard({
       className={`stat-card stat-card--${color}`}
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
     >
       <span className="stat-num">{count}{suffix}</span>
       <span className="stat-primary">{label}</span>
@@ -101,7 +101,7 @@ export default function CredentialsBelt() {
                 className="cred-pill"
                 initial={{ opacity: 0, y: 14, scale: 0.95 }}
                 animate={isBeltInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: i * 0.055, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.5, delay: i * 0.055, ease: [0.16, 1, 0.3, 1] }}
               >
                 <span className="cred-pill-icon" aria-hidden="true">{item.icon}</span>
                 <div className="cred-pill-text">

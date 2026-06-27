@@ -98,7 +98,7 @@ function Chapter({ chapter, index }: { chapter: Chapter; index: number }) {
       data-align={isRight ? 'right' : 'left'}
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
     >
       {/* Year — large display */}
       <motion.div
@@ -106,7 +106,7 @@ function Chapter({ chapter, index }: { chapter: Chapter; index: number }) {
         aria-hidden="true"
         initial={{ opacity: 0, x: isRight ? 20 : -20 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 0.9, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.9, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
       >
         {chapter.year}
       </motion.div>
@@ -127,7 +127,7 @@ function Chapter({ chapter, index }: { chapter: Chapter; index: number }) {
           className="chapter-headline"
           initial={{ opacity: 0, y: 14 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.65, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.65, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
         >
           {chapter.headline}
         </motion.h3>

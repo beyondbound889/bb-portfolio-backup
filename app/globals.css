@@ -221,27 +221,7 @@ body {
   }
 }
 
-/* ══════════════════════════════════════════════════════════
-   BUTTON SHINE SWEEP — applied via .btn-shine alongside
-   existing Tailwind button classes (rounded-full bg-ink …).
-   ══════════════════════════════════════════════════════════ */
-.btn-shine {
-  position: relative;
-  overflow: hidden;
-}
-.btn-shine::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(105deg, transparent 40%, rgb(255 255 255 / 0.16) 50%, transparent 60%);
-  background-size: 220% 100%;
-  background-position: 120% 0;
-  transition: background-position 0.7s cubic-bezier(0.16,1,0.3,1);
-  pointer-events: none;
-}
-.btn-shine:hover::after {
-  background-position: -20% 0;
-}
+/* btn-shine: de-duplicated here — canonical definition is in the Phase-5 block below. */
 
 /* ══════════════════════════════════════════════════════════
    MAGNETIC NAV LINK — JS sets transform inline; this just
@@ -537,10 +517,6 @@ section {
   border-color: rgba(255,255,255,0.06);
 }
 
-/* Chapter year glow on hover — dark mode */
-:global(.dark) .journey-chapter:hover .chapter-year {
-  text-shadow: 0 0 60px rgba(90, 196, 184, 0.2);
-}
 
 /* Premium scrollbar */
 ::-webkit-scrollbar { width: 5px; }

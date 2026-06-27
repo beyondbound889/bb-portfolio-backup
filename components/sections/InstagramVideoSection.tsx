@@ -40,7 +40,7 @@ export default function InstagramVideoSection() {
         className="igv-header"
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       >
         <span className="igv-eyebrow">In the field</span>
         <div className="igv-header-content">
@@ -75,7 +75,7 @@ export default function InstagramVideoSection() {
         className="igv-embed-outer"
         initial={{ opacity: 0, y: 30, scale: 0.98 }}
         animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-        transition={{ duration: 0.8, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.8, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
       >
         <div className="igv-embed-inner">
           <blockquote
